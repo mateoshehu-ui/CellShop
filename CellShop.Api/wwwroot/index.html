@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CellShop — Dyqani i telefonave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">CellShop</a>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Hyrja</a>
+        <a href="products.html">Dyqani</a>
+        <a href="#contact">Kontakti</a>
+        <a href="cart.html" class="cart-btn">
+          🛒 <span>Karroca</span>
+          <span class="cart-badge hidden">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="pill">✨ Modelet 2025 – 2026</span>
+        <h1>Telefoni i ri që ke ëndërruar,<br><span class="accent">me një klikim larg.</span></h1>
+        <p>Apple, Samsung, Xiaomi, Huawei dhe Redmi — çmime konkurruese, garanci 2 vite, dërgesë 24h.</p>
+        <div class="hero-cta">
+          <a class="btn" href="products.html">Shiko produktet →</a>
+          <a class="btn ghost" href="#contact">Na kontakto</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>500+</strong><span>Klientë të kënaqur</span></div>
+          <div class="hero-stat"><strong>2 vjet</strong><span>Garanci e plotë</span></div>
+          <div class="hero-stat"><strong>24h</strong><span>Dërgesë</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <img src="images/iphone-16-plus.jpg" alt="iPhone 16 Plus" class="hero-img">
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Garanci 2 vite</h3>
+        <p>Të gjitha produktet me garanci dy-vjeçare dhe mbështetje teknike falas.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Dërgesë e shpejtë</h3>
+        <p>24h në Tiranë, 2-3 ditë në qytetet e tjera. Falas mbi 500 €.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">↩️</div>
+        <h3>Kthim 14 ditë</h3>
+        <p>Nuk e pëlqen? Kthim pa pyetje brenda 14 ditëve.</p>
+      </article>
+    </section>
+
+    <div class="section-title">
+      <span class="pill">🔥 Bestseller</span>
+      <h2>Modelet më të kërkuara</h2>
+      <p>Një përzgjedhje e telefonave më të popullarizuar të momentit</p>
+    </div>
+    <div id="productsGrid" class="products-grid"></div>
+    <div style="text-align:center;margin:32px 0 60px">
+      <a class="btn" href="products.html">Shiko të gjitha produktet →</a>
+    </div>
+
+    <section id="contact" class="contact">
+      <h2>Na kontakto</h2>
+      <p>📧 info@cellshop.al</p>
+      <p>📞 +355 68 122 2345</p>
+      <p>📍 Rr. Myslym Shyri, Tiranë</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 CellShop. Të gjitha të drejtat e rezervuara.</p>
+  </footer>
+
+  <div id="modalBackdrop" class="modal-backdrop"><div class="modal"></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

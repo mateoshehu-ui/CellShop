@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pagesa — CellShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">CellShop</a>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html">Hyrja</a>
+        <a href="products.html">Dyqani</a>
+        <a href="cart.html" class="cart-btn">
+          🛒 <span>Karroca</span>
+          <span class="cart-badge hidden">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+    <h1>Pagesa</h1>
+    <div class="checkout-layout">
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <h2>Të dhënat e dorëzimit</h2>
+
+        <div class="form-group">
+          <label for="customerName">Emri i plotë</label>
+          <input type="text" id="customerName" name="customerName" required placeholder="p.sh. Artan Hoxha">
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="customerEmail">Email</label>
+          <input type="email" id="customerEmail" name="customerEmail" required placeholder="artan@email.com">
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="customerPhone">Telefoni <small>(opsional)</small></label>
+          <input type="tel" id="customerPhone" name="customerPhone" placeholder="+355 6X XXX XXXX">
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="shippingAddress">Adresa</label>
+          <input type="text" id="shippingAddress" name="shippingAddress" required placeholder="Rr. Myslym Shyri, Nr. 12, Tiranë">
+          <span class="form-error"></span>
+        </div>
+
+        <button class="btn" id="submitOrderBtn" type="submit" style="width:100%;margin-top:16px">
+          Konfirmo porosinë →
+        </button>
+      </form>
+
+      <div class="checkout-summary" id="checkoutSummary">
+        <h2>Porosia jote</h2>
+        <div id="orderItems"></div>
+        <div id="orderTotal" style="margin-top:12px;border-top:1px solid var(--border);padding-top:12px"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 CellShop. Të gjitha të drejtat e rezervuara.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

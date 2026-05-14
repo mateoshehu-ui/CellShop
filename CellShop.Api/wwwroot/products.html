@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dyqani — CellShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">CellShop</a>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html">Hyrja</a>
+        <a href="products.html" class="active">Dyqani</a>
+        <a href="index.html#contact">Kontakti</a>
+        <a href="cart.html" class="cart-btn">
+          🛒 <span>Karroca</span>
+          <span class="cart-badge hidden">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <h1>📱 Dyqani</h1>
+    <p>Filtroni sipas markës ose kërkoni një model specifik</p>
+  </div>
+
+  <main>
+    <div class="products-toolbar">
+      <input type="search" id="searchInput" placeholder="🔍 Kërko model ose markë...">
+      <select id="brandSelect">
+        <option value="">Të gjitha markat</option>
+      </select>
+      <select id="sortSelect">
+        <option value="price-asc">Çmimi: më i ulët</option>
+        <option value="price-desc">Çmimi: më i lartë</option>
+        <option value="name">Sipas emrit</option>
+      </select>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div id="productsGrid" class="products-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 CellShop. Të gjitha të drejtat e rezervuara.</p>
+  </footer>
+
+  <div id="modalBackdrop" class="modal-backdrop"><div class="modal"></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
